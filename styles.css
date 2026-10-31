@@ -1,0 +1,1210 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+/* Quick Exit Button */
+.quick-exit {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10000;
+    background: #dc3545;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.quick-exit button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.quick-exit button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Navigation */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding: 5px 0;
+}
+
+.nav-menu a:hover {
+    color: #e74c3c;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 3px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.cta-button:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+/* Recipe Grid */
+.featured-recipes {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.featured-recipes h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.recipe-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Mediterranean Pasta Salad */
+.recipe-card:nth-child(1) .recipe-image {
+    background-image: url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+}
+
+/* Healthy Chicken Stir-Fry */
+.recipe-card:nth-child(2) .recipe-image {
+    background-image: url('https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+}
+
+/* Homemade Banana Bread */
+.recipe-card:nth-child(3) .recipe-image {
+    background-image: url('https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+}
+
+.recipe-card h3 {
+    padding: 20px 20px 10px;
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.recipe-card p {
+    padding: 0 20px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.recipe-meta {
+    padding: 0 20px 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Cooking Tips */
+.cooking-tips {
+    padding: 80px 20px;
+}
+
+.cooking-tips h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #2c3e50;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.tip-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+}
+
+.tip-card h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* SafeSpace Styles */
+.safe-space {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    min-height: 100vh;
+}
+
+.safe-space-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.safe-space-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ecf0f1;
+}
+
+.safe-message {
+    font-size: 1.2rem;
+    color: #bdc3c7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.help-options {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.help-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.help-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+.help-card.emergency {
+    border-left: 5px solid #e74c3c;
+}
+
+.help-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #ecf0f1;
+    line-height: 1.3;
+}
+
+.help-card p {
+    color: #bdc3c7;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+.emergency-inline {
+    background: rgba(139, 69, 19, 0.9);
+    padding: 16px;
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: left;
+    border: 2px solid rgba(165, 42, 42, 0.6);
+}
+
+.emergency-inline strong {
+    color: #ecf0f1;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.phone-number {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: block;
+    margin: 8px 0;
+}
+
+.emergency-inline small {
+    color: #bdc3c7;
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 5px;
+}
+
+.help-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+    flex-shrink: 0;
+    font-size: 0.9rem;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.help-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.safety-notice {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 20px;
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 10px;
+    text-align: center;
+    color: #f1c40f;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Secret Access Input */
+.secret-access {
+    margin-top: 15px;
+}
+
+.secret-access input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    width: 200px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    transition: all 0.3s ease;
+}
+
+.secret-access input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.secret-access input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+/* Page Styles */
+.page-content {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    min-height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    margin: -40px -20px 40px -20px;
+    border-radius: 0 0 20px 20px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.emergency-contacts {
+    display: grid;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.contact-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #e74c3c;
+}
+
+.contact-card h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.contact-card .phone {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.contact-card a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.resource-section {
+    margin: 40px 0;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.resource-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.resource-list {
+    list-style: none;
+}
+
+.resource-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.resource-list li:last-child {
+    border-bottom: none;
+}
+
+.resource-list strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Safety Plan Styles */
+.safety-step {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+}
+
+.safety-step h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.safety-step ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.safety-step li {
+    margin: 8px 0;
+    color: #555;
+}
+
+/* Form Styles */
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background: #219a52;
+    transform: translateY(-2px);
+}
+
+/* Chat Styles */
+.chat-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.chat-status {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.message.user {
+    background: #3498db;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 6px;
+}
+
+.message.support {
+    background: white;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-time {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.chat-input-container {
+    padding: 20px;
+    background: white;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.chat-input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.chat-send-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.chat-send-btn:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+}
+
+.chat-send-btn:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.typing-indicator {
+    padding: 12px 16px;
+    background: white;
+    border-radius: 18px;
+    border-bottom-left-radius: 6px;
+    align-self: flex-start;
+    max-width: 80px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in;
+}
+
+.typing-dots {
+    display: flex;
+    gap: 3px;
+}
+
+.typing-dots span {
+    width: 8px;
+    height: 8px;
+    background: #bdc3c7;
+    border-radius: 50%;
+    animation: typing 1.4s infinite;
+}
+
+.typing-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+
+    30% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-disclaimer {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #856404;
+    text-align: center;
+}
+
+/* Responsive Design for All Devices */
+
+/* Large Tablets & Small Desktops */
+@media (max-width: 1024px) {
+    .help-options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .help-card {
+        height: auto;
+        min-height: 240px;
+        max-width: 100%;
+    }
+
+    .help-card.emergency {
+        min-height: 280px;
+    }
+
+    .container {
+        padding: 0 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .safe-space {
+        padding: 40px 20px;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 999;
+        padding: 20px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    /* Recipe & Tips Grids */
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* SafeSpace Cards */
+    .help-options {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 800px;
+    }
+
+    .help-card {
+        height: auto;
+        min-height: 220px;
+        padding: 20px;
+    }
+
+    .help-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .help-card p {
+        font-size: 0.9rem;
+    }
+
+    .help-button {
+        font-size: 0.85rem;
+        padding: 12px 15px;
+        min-height: 45px;
+    }
+
+    .emergency-hotline {
+        padding: 14px;
+        margin: 12px 0;
+    }
+
+    .phone-number {
+        font-size: 1.2rem;
+    }
+
+    /* Page Content */
+    .page-content {
+        padding: 20px 15px;
+    }
+
+    .page-header {
+        margin: -20px -15px 30px -15px;
+        padding: 30px 20px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    /* Chat Container */
+    .chat-container {
+        height: 400px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+
+    /* Container & Layout */
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    /* Section Headings */
+    .featured-recipes h2,
+    .cooking-tips h2,
+    .about h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Recipe Grid */
+    .recipe-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .recipe-card h3 {
+        font-size: 1.2rem;
+    }
+
+    /* SafeSpace Layout */
+    .safe-space {
+        padding: 30px 15px;
+    }
+
+    .safe-space-header h1 {
+        font-size: 2rem;
+    }
+
+    .safe-message {
+        font-size: 1rem;
+    }
+
+    .help-options {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        max-width: 100%;
+    }
+
+    .help-card {
+        height: auto;
+        min-height: 200px;
+        padding: 18px;
+    }
+
+    .help-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .help-card p {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    .help-button {
+        font-size: 0.85rem;
+        padding: 12px;
+        min-height: 44px;
+        margin-top: 12px;
+    }
+
+    .emergency-hotline {
+        padding: 12px;
+        margin: 10px 0;
+    }
+
+    .emergency-hotline strong {
+        font-size: 0.9rem;
+    }
+
+    .phone-number {
+        font-size: 1.1rem;
+    }
+
+    .emergency-hotline small {
+        font-size: 0.8rem;
+    }
+
+    /* Page Content */
+    .page-content {
+        padding: 15px 10px;
+    }
+
+    .page-header {
+        margin: -15px -10px 25px -10px;
+        padding: 25px 15px;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Chat Interface */
+    .chat-container {
+        height: 350px;
+        margin: 20px 0;
+    }
+
+    .chat-input-container {
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chat-send-btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Forms */
+    .contact-form {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .submit-button {
+        padding: 14px 25px;
+        font-size: 16px;
+    }
+
+    /* Quick Exit Button */
+    .quick-exit {
+        top: 8px;
+        right: 8px;
+    }
+
+    .quick-exit button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 320px) {
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .help-card {
+        padding: 15px;
+        min-height: 180px;
+    }
+
+    .help-button {
+        padding: 10px;
+        min-height: 40px;
+        font-size: 0.8rem;
+    }
+
+    .emergency-hotline {
+        padding: 10px;
+    }
+
+    .phone-number {
+        font-size: 1rem;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .help-card:hover {
+        transform: none;
+    }
+
+    .help-button:hover {
+        transform: none;
+        background: #3498db;
+    }
+
+    .recipe-card:hover {
+        transform: none;
+    }
+
+    .tip-card:hover {
+        transform: none;
+    }
+
+    .cta-button:hover {
+        transform: none;
+        background: #e74c3c;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Recipes - Secure Contact Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quick-exit">
+        <button onclick="quickExit()">✕ Exit</button>
+    </div>
+    
+    <div class="page-content">
+        <div class="page-header">
+            <h1>📞 Secure Contact Form</h1>
+            <p>Reach out to local support organizations safely</p>
+        </div>
+        
+        <div class="safety-notice" style="margin-bottom: 30px;">
+            <p><strong>Privacy Notice:</strong> This form does not store your information. For maximum safety, consider using a public computer or trusted friend's device.</p>
+        </div>
+        
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="contactType">Type of Help Needed:</label>
+                    <select id="contactType" name="contactType" required>
+                        <option value="">Select help needed...</option>
+                        <option value="emergency">Emergency shelter/housing</option>
+                        <option value="counseling">Counseling and emotional support</option>
+                        <option value="legal">Legal assistance and advocacy</option>
+                        <option value="safety">Safety planning</option>
+                        <option value="other">Other support services</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Your General Location:</label>
+                    <input type="text" id="location" name="location" placeholder="City, State" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="situation">Brief Description (optional):</label>
+                    <textarea id="situation" name="situation" placeholder="Share only what you're comfortable with"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Send Secure Request</button>
+            </form>
+        </div>
+        
+        <div class="resource-section">
+            <h2>Alternative Contact Methods</h2>
+            <ul class="resource-list">
+                <li><strong>Crisis Text Line:</strong> Text "HELLO" to 741741</li>
+                <li><strong>Online Chat:</strong> thehotline.org</li>
+                <li><strong>Email:</strong> help@domesticshelters.org</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

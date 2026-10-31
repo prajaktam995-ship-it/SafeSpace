@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Home Recipes - Fresh & Healthy Cooking Ideas</title>
+    <meta name="description" content="Discover amazing home recipes for healthy and delicious meals. Fresh ingredients, easy cooking tips, and family-friendly dishes.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Quick Exit Button - Hidden by default -->
+    <div id="quickExit" class="quick-exit hidden">
+        <button onclick="quickExit()" title="Quick Exit (Press Escape)">✕ Exit</button>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Secret unlock: Click logo 5 times quickly -->
+                <div class="logo" id="logo" onclick="handleLogoClick()">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V6.5C15 5.1 13.9 4 12.5 4S10 5.1 10 6.5V7.5L4 7V9L10 8.5V15C10 16.1 10.9 17 12 17S14 16.1 14 15V8.5L21 9ZM12 19C9.24 19 7 16.76 7 14H5C5 17.87 8.13 21 12 21S19 17.87 19 14H17C17 16.76 14.76 19 12 19Z" fill="#e74c3c"/>
+                    </svg>
+                    <span>Fresh Recipes</span>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#tips">Cooking Tips</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="mainContent">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Welcome to Fresh Recipes</h1>
+                <p>Discover delicious, healthy recipes that your family will love. From quick weeknight dinners to special occasion treats!</p>
+                <a href="#recipes" class="cta-button">Browse Recipes</a>
+            </div>
+        </section>
+
+        <!-- Featured Recipes -->
+        <section class="featured-recipes" id="recipes">
+            <div class="container">
+                <h2>Featured Recipes</h2>
+                <div class="recipe-grid">
+                    <div class="recipe-card">
+                        <div class="recipe-image"></div>
+                        <h3>Mediterranean Pasta Salad</h3>
+                        <p>A fresh and vibrant pasta salad perfect for summer gatherings.</p>
+                        <div class="recipe-meta">
+                            <span>⏱️ 20 min</span>
+                            <span>👥 4 servings</span>
+                        </div>
+                    </div>
+                    
+                    <div class="recipe-card">
+                        <div class="recipe-image"></div>
+                        <h3>Healthy Chicken Stir-Fry</h3>
+                        <p>Quick and nutritious weeknight dinner packed with vegetables.</p>
+                        <div class="recipe-meta">
+                            <span>⏱️ 15 min</span>
+                            <span>👥 3 servings</span>
+                        </div>
+                    </div>
+                    
+                    <div class="recipe-card">
+                        <div class="recipe-image"></div>
+                        <h3>Homemade Banana Bread</h3>
+                        <p>Moist and delicious banana bread perfect for breakfast or snacks.</p>
+                        <div class="recipe-meta">
+                            <span>⏱️ 60 min</span>
+                            <span>👥 8 servings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cooking Tips -->
+        <section class="cooking-tips" id="tips">
+            <div class="container">
+                <h2>Cooking Tips & Tricks</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h3>Meal Prep Mastery</h3>
+                        <p>Save time during busy weekdays with these smart meal preparation strategies.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Fresh Herb Storage</h3>
+                        <p>Keep your herbs fresh longer with these simple storage techniques.</p>
+                    </div>
+                    <div class="tip-card">
+                        <h3>Perfect Seasoning</h3>
+                        <p>Learn how to balance flavors and season your dishes like a professional chef.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2>About Fresh Recipes</h2>
+                <p>We're passionate about bringing you delicious, healthy, and easy-to-make recipes that fit your lifestyle. Our collection features dishes from around the world, focusing on fresh ingredients and simple techniques that anyone can master.</p>
+                <p>Whether you're a beginner cook or an experienced chef, you'll find inspiration for every meal of the day.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Hidden SafeSpace Content -->
+    <div id="safeSpaceContent" class="safe-space hidden">
+        <div class="safe-space-header">
+            <h1>🔒 SafeSpace - You Are Not Alone</h1>
+            <p class="safe-message">This is a secure space. You are safe here. Help is available.</p>
+        </div>
+        
+        <div class="help-options">
+            <div class="help-card emergency">
+                <h3>🚨 Immediate Help</h3>
+                <p>If you are in immediate danger:</p>
+                <p class="emergency-inline">
+                    <strong>National Domestic Violence Hotline</strong><br>
+                    <span class="phone-number">1-800-799-7233</span><br>
+                    <small>24/7 confidential support</small>
+                </p>
+                <button onclick="showPage('help')" class="help-button">More Emergency Resources</button>
+            </div>
+            
+            <div class="help-card resources">
+                <h3>📊 Resources & Information</h3>
+                <p>Safety planning, legal rights, and support services</p>
+                <button onclick="showPage('resources')" class="help-button">View Resources</button>
+            </div>
+            
+            <div class="help-card safety">
+                <h3>📋 Safety Planning</h3>
+                <p>Create a personalized safety plan</p>
+                <button onclick="showPage('safety-plan')" class="help-button">Start Planning</button>
+            </div>
+            
+            <div class="help-card legal">
+                <h3>⚖️ Legal Information</h3>
+                <p>Know your rights and legal options</p>
+                <button onclick="showPage('legal-info')" class="help-button">Legal Info</button>
+            </div>
+            
+            <div class="help-card contact">
+                <h3>📞 Secure Contact</h3>
+                <p>Reach out to local support organizations</p>
+                <button onclick="showPage('contact')" class="help-button">Contact Help</button>
+            </div>
+            
+            <div class="help-card chat">
+                <h3>💬 Anonymous Chat</h3>
+                <p>Chat with a support specialist anonymously</p>
+                <button onclick="showPage('chat')" class="help-button">Start Chat</button>
+            </div>
+        </div>
+        
+        <div class="safety-notice">
+            <p><strong>Privacy Notice:</strong> This site does not track or store any of your information. Always clear your browser history and use private/incognito browsing when possible.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fresh Recipes. All rights reserved. | <a href="#contact">Contact Us</a></p>
+            <div class="secret-access">
+                <input type="text" 
+                       id="secretCode" 
+                       placeholder="Newsletter signup..." 
+                       maxlength="10"
+                       autocomplete="off"
+                       onkeyup="checkSecretCode(event)">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
